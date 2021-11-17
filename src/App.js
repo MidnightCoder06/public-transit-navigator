@@ -11,6 +11,7 @@ function App() {
 
   return (
     <div className="App">
+      <h3 className="App-title"> Real-time Departures </h3>
       <RouteSelection setRouteSelected={setRouteSelected} />
       {routeSelected ? <DirectionSelectionn setDirectionSelected={setDirectionSelected}  /> : ''}
       {directionSelected ? <StopSelection /> : ''}

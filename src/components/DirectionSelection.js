@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/DropdownMenu.css';
 
 const DirectionSelection = (props) => {
   const { setDirectionSelected } = props;
@@ -9,7 +10,7 @@ const DirectionSelection = (props) => {
   }
 
   return (
-    <div>
+    <div className="dropdown-menu">
       <select onChange={handleDirectionSelection}>
         {
           directions.map((direction, idx) => {

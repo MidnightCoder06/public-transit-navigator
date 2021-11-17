@@ -1,11 +1,9 @@
 Remaining Steps
-- title text
-- result table component 
+- result table component
 - api calls
-- styling
 - testing
-- hosting
-- documentation
+- delete unused code
+- host on Netlify
 
 
 # Getting Started with Create React App

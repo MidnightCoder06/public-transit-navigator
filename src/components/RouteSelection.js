@@ -1,4 +1,5 @@
 import React, { useState }  from 'react';
+import '../styles/DropdownMenu.css';
 
 const RouteSelection = (props) => {
   const { setRouteSelected } = props;
@@ -9,7 +10,7 @@ const RouteSelection = (props) => {
   }
 
   return (
-    <div>
+    <div className="dropdown-menu">
       <select onChange={handleRouteSelection}>
       {
         routes.map((route, idx) => {
