@@ -1,21 +1,24 @@
 import React, { useState }  from 'react';
 
-const RouteSelection = () => {
-  const [routes, setRoutes] = useState(['mock route 1', 'mock route 2', 'mock route 3']);
+const RouteSelection = (props) => {
+  const { setRouteSelected } = props;
+  const [routes, setRoutes] = useState(['Select route', 'mock route 1', 'mock route 2']);
+
+  const handleRouteSelection = () => {
+    setRouteSelected(true);
+  }
+
   return (
     <div>
-      <select>
+      <select onChange={handleRouteSelection}>
       {
-        routes.map(route => {
-          return(
-            <>
-              <option value={route}> {route} </option>
-            </>
+        routes.map((route, idx) => {
+          return (
+            <option value={route} key={idx}> {route} </option>
           );
         })
       }
       </select>
-
     </div>
   );
 }
