@@ -1,3 +1,13 @@
+Remaining Steps
+- title text
+- result table component 
+- api calls
+- styling
+- testing
+- hosting
+- documentation
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
