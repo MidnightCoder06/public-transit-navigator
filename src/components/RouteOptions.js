@@ -1,32 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Table.css'
 
 const RouteOptions = () => {
-  const [tableData, setTableData] = useState([['table header 1', 'table header 2'], ['table data 1', 'table data 2']]);
-  const th = tableData[0];
-  const td = tableData[1];
+  const [tableData, setTableData] = useState(['table data 1', 'table data 2', 'table data 2']);
+
+  // note that this api call would need access to the selections from the dropdown menu
+  useEffect(() => {
+
+  },[]);
+
   return (
     <div className="center-table">
       <table>
         <tbody>
           <tr>
+            <th>Directions</th>
+          </tr>
             {
-              th.map((header, idx) => {
+              tableData.map((data, idx) => {
                 return (
-                  <th key={idx}>{header}</th>
+                  <tr key={idx}>
+                    <td>{data}</td>
+                  </tr>
                 );
               })
             }
-          </tr>
-          <tr>
-            {
-              td.map((data, idx) => {
-                return (
-                  <td key={idx}>{data}</td>
-                );
-              })
-            }
-          </tr>
         </tbody>
       </table>
     </div>

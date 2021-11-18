@@ -1,5 +1,5 @@
 Remaining Steps
-- api calls
+- build your own backend
 - testing
 - host on Netlify
 
