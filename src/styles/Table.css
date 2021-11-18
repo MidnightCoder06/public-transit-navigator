@@ -1,0 +1,35 @@
+.center-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+  margin: 30px;
+  border: 1px solid #333;
+  border-spacing: 0;
+  box-shadow: 0px 0px 36px 15px rgba(0, 0, 0, 0.28);
+}
+
+/* alternate background color for even odd rows -> just have to styles here -> math is done based on idx calculation in the js  */
+/* or you could do the math in css!
+  That's probably cleaner tbh!! pseduo classes or whatever those videos from web dev simplied showed how to do this
+*/
+
+td, th {
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff;
+    border: solid 1px #000;
+    padding: 15px;
+    font-weight: 500;
+}
+
+tr, td {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+  border: solid 1px #000;
+  padding: 15px;
+  font-weight: 500;
+}

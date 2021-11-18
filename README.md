@@ -1,8 +1,6 @@
 Remaining Steps
-- result table component
 - api calls
 - testing
-- delete unused code
 - host on Netlify
 
 
