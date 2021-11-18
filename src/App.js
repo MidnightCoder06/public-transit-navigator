@@ -1,23 +1,28 @@
 import React, { useState } from 'react';
 import './App.css';
 import RouteSelection from './components/RouteSelection';
-import DirectionSelectionn from './components/DirectionSelection';
+import DirectionSelection from './components/DirectionSelection';
 import StopSelection from './components/StopSelection';
 import RouteOptions from './components/RouteOptions';
 
 function App() {
   // control when the next element appears
-  const [routeSelected, setRouteSelected] = useState(false);
-  const [directionSelected, setDirectionSelected] = useState(false);
-  const [stopSelected, setStopSelected] = useState(false);
+  const [isRouteSelected, setIsRouteSelected] = useState(false);
+  const [isDirectionSelected, setIsDirectionSelected] = useState(false);
+  const [isStopSelected, setIsStopSelected] = useState(false);
+
+  // store the selection data
+  const [selectedRoute, setSelectedRoute] = useState('');
+  const [selectedDirection, setDirectionSelected] = useState('');
+  const [selectedStop, setSelectedStop] = useState('');
 
   return (
     <div className="App">
       <h3 className="App-title"> Real-time Departures </h3>
-      <RouteSelection setRouteSelected={setRouteSelected} />
-      {routeSelected ? <DirectionSelectionn setDirectionSelected={setDirectionSelected}  /> : ''}
-      {directionSelected ? <StopSelection setStopSelected={setStopSelected} /> : ''}
-      {stopSelected ? <RouteOptions /> : ''}
+      <RouteSelection setSelectedRoute={setSelectedRoute} setIsRouteSelected={setIsRouteSelected} />
+      {isRouteSelected ? <DirectionSelection setDirectionSelected={setDirectionSelected} setIsDirectionSelected={setIsDirectionSelected} /> : ''}
+      {isDirectionSelected ? <StopSelection setSelectedStop={setSelectedStop} setIsStopSelected={setIsStopSelected} /> : ''}
+      {isStopSelected ? <RouteOptions selectedRoute={selectedRoute} selectedDirection={selectedDirection} selectedStop={selectedStop} /> : ''}
     </div>
   );
 }

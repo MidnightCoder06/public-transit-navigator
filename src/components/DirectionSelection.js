@@ -2,16 +2,17 @@ import React, { useState } from 'react';
 import '../styles/DropdownMenu.css';
 
 const DirectionSelection = (props) => {
-  const { setDirectionSelected } = props;
+  const { setDirectionSelected, setIsDirectionSelected } = props;
   const [directions, setDirections] = useState(['Select direction', 'Northbound', 'Southbound']);
 
-  const handleDirectionSelection = () => {
-    setDirectionSelected(true);
+  const handleDirectionSelection = (selection) => {
+    setIsDirectionSelected(true);
+    setDirectionSelected(selection);
   }
 
   return (
     <div className="dropdown-menu">
-      <select onChange={handleDirectionSelection}>
+      <select onChange={e => handleDirectionSelection(e.target.value)}>
         {
           directions.map((direction, idx) => {
             return (

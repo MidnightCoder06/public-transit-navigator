@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/DropdownMenu.css';
 
 const StopSelection = (props) => {
-  const { setStopSelected } = props;
+  const { setSelectedStop, setIsStopSelected } = props;
   const [stops, setStops] = useState(['Select stop', 'mock stop 1', 'mock stop 2']);
 
   useEffect(() => {
@@ -31,13 +31,14 @@ const StopSelection = (props) => {
     fetchStops();
   }, [])
 
-  const handleStopSelection = () => {
-    setStopSelected(true);
+  const handleStopSelection = (selection) => {
+    setIsStopSelected(true);
+    setSelectedStop(selection);
   }
 
   return (
     <div className="dropdown-menu">
-      <select onChange={handleStopSelection}>
+      <select onChange={e => handleStopSelection(e.target.value)}>
         {
           stops.map((stop, idx) => {
             return (

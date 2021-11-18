@@ -1,6 +1,9 @@
 Remaining Steps
+- frontend tests with mocked calls
 - build your own backend
-- testing
+- backend tests with mocked calls
+- call the backend from your frontend
+- testing with more realistic data (stub the calls)
 - host on Netlify
 
 

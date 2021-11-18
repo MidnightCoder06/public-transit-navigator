@@ -2,7 +2,7 @@ import React, { useState, useEffect }  from 'react';
 import '../styles/DropdownMenu.css';
 
 const RouteSelection = (props) => {
-  const { setRouteSelected } = props;
+  const { setSelectedRoute, setIsRouteSelected } = props;
   const [routes, setRoutes] = useState(['Select route', 'mock route 1', 'mock route 2']);
 
   useEffect(() => {
@@ -31,13 +31,14 @@ const RouteSelection = (props) => {
   }, []);
 
 
-  const handleRouteSelection = () => {
-    setRouteSelected(true);
+  const handleRouteSelection = (selection) => {
+    setIsRouteSelected(true);
+    setSelectedRoute(selection);
   }
 
   return (
     <div className="dropdown-menu">
-      <select onChange={handleRouteSelection}>
+      <select onChange={e => handleRouteSelection(e.target.value)}>
       {
         routes.map((route, idx) => {
           return (
