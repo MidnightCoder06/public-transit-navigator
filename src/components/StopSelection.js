@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/DropdownMenu.css';
 
+// what does stop even mean? -> I guess your destination 
+  // Have the list of options be dependent on the mode of transportation
 const StopSelection = (props) => {
   const { setSelectedStop, setIsStopSelected } = props;
   const [stops, setStops] = useState(['Select stop', 'mock stop 1', 'mock stop 2']);

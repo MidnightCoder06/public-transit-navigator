@@ -1,10 +1,15 @@
 Remaining Steps
+- reorganize the frontend to your new ideas 
 - frontend tests with mocked calls
-- build your own backend
+- build your own backend in NodeJS & Express
 - backend tests with mocked calls
 - call the backend from your frontend
 - testing with more realistic data (stub the calls)
-- host on Netlify
+- introduce Redux (to store all the previous selections -> have that used for the final table generate button (todo: create a button) instead of the current way via props)
+- 404 page
+- hook up cosmodb database
+- css modules
+- host via Azure
 
 
 # Getting Started with Create React App

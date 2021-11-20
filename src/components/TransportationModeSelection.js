@@ -1,9 +1,10 @@
 import React, { useState, useEffect }  from 'react';
 import '../styles/DropdownMenu.css';
 
-const RouteSelection = (props) => {
+// Routes doesn't even make sense? How about lock a set of harcoded transportation options
+const TransportationModeSelection = (props) => {
   const { setSelectedRoute, setIsRouteSelected } = props;
-  const [routes, setRoutes] = useState(['Select route', 'mock route 1', 'mock route 2']);
+  const [routes, setRoutes] = useState(['Select method of transportation', 'Bus', 'Caltrain', 'BART', 'Muni']);
 
   useEffect(() => {
       const fetchRoutines = async () => {
@@ -51,4 +52,4 @@ const RouteSelection = (props) => {
   );
 }
 
-export default RouteSelection;
+export default TransportationModeSelection;
