@@ -1,5 +1,4 @@
 Remaining Steps
-- frontend tests with mocked calls
 - build your own backend in NodeJS & Express
 - backend tests with mocked calls
 - call the backend from your frontend

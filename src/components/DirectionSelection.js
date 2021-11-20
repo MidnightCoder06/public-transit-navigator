@@ -12,7 +12,7 @@ const DirectionSelection = (props) => {
 
   return (
     <div className="dropdown-menu">
-      <select onChange={e => handleDirectionSelection(e.target.value)}>
+      <select data-testid="direction-element" onChange={e => handleDirectionSelection(e.target.value)}>
         {
           directions.map((direction, idx) => {
             return (

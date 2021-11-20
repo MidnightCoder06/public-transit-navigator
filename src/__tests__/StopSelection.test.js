@@ -3,5 +3,6 @@ import StopSelection from '../components/StopSelection';
 
 test('Ensure the dropdown menu exists', () => {
   render(<StopSelection />);
-  // via test id?
+  const stopDropDownMenu = screen.getByTestId('stop-element');
+  expect(stopDropDownMenu).toBeInTheDocument();
 });

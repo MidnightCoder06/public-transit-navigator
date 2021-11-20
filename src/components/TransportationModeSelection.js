@@ -12,7 +12,7 @@ const TransportationModeSelection = (props) => {
 
   return (
     <div className="dropdown-menu">
-      <select onChange={e => handleTransportationModeSelection(e.target.value)}>
+      <select data-testid="transportation-element" onChange={e => handleTransportationModeSelection(e.target.value)}>
       {
         transportationOptions.map((transportationOption, idx) => {
           return (
