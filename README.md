@@ -1,5 +1,4 @@
 Remaining Steps
-- reorganize the frontend to your new ideas 
 - frontend tests with mocked calls
 - build your own backend in NodeJS & Express
 - backend tests with mocked calls

@@ -7,12 +7,12 @@ import RouteOptions from './components/RouteOptions';
 
 function App() {
   // control when the next element appears
-  const [isRouteSelected, setIsRouteSelected] = useState(false);
+  const [isTransportationModeSelected, setIsTransportationModeSelected] = useState(false);
   const [isDirectionSelected, setIsDirectionSelected] = useState(false);
   const [isStopSelected, setIsStopSelected] = useState(false);
 
   // store the selection data
-  const [selectedRoute, setSelectedRoute] = useState('');
+  const [selectedTransportationMode, setSelectedTransportationMode] = useState('');
   const [selectedDirection, setDirectionSelected] = useState('');
   const [selectedStop, setSelectedStop] = useState('');
 
@@ -20,10 +20,10 @@ function App() {
   return (
     <div className="App">
       <h3 className="App-title"> Real-time Bay Area Departures </h3>
-      <TransportationModeSelection setSelectedRoute={setSelectedRoute} setIsRouteSelected={setIsRouteSelected} />
-      {isRouteSelected ? <DirectionSelection setDirectionSelected={setDirectionSelected} setIsDirectionSelected={setIsDirectionSelected} /> : ''}
+      <TransportationModeSelection setSelectedTransportationMode={setSelectedTransportationMode} setIsTransportationModeSelected={setIsTransportationModeSelected} />
+      {isTransportationModeSelected ? <DirectionSelection setDirectionSelected={setDirectionSelected} setIsDirectionSelected={setIsDirectionSelected} /> : ''}
       {isDirectionSelected ? <StopSelection setSelectedStop={setSelectedStop} setIsStopSelected={setIsStopSelected} /> : ''}
-      {isStopSelected ? <RouteOptions selectedRoute={selectedRoute} selectedDirection={selectedDirection} selectedStop={selectedStop} /> : ''}
+      {isStopSelected ? <RouteOptions selectedTransportationMode={selectedTransportationMode} selectedDirection={selectedDirection} selectedStop={selectedStop} /> : ''}
     </div>
   );
 }

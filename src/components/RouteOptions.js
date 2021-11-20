@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Table.css'
 
 const RouteOptions = (props) => {
-  const { selectedRoute, selectedDirection, selectedStop } = props;
+  const { selectedTransportationMode, selectedDirection, selectedStop } = props;
   const [tableData, setTableData] = useState(['table data 1', 'table data 2', 'table data 2']);
 
   // note that this api call would need access to the selections from the dropdown menu
   console.log("****")
-  console.log(selectedRoute)
+  console.log(selectedTransportationMode)
   console.log(selectedDirection)
   console.log(selectedStop)
   console.log("****")
