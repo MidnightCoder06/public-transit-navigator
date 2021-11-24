@@ -9,6 +9,42 @@ Remaining Steps
 - css modules
 - host via Azure
 
+When you add the -D flag, or --save-dev, you are installing it as a development dependency, which adds it to the devDependencies list.
+
+`npm run start-user-interface`
+`npm run start-server`
+
+-
+Single responsibility principle simply means giving only one responsibility to a component and letting it execute it perfectly, be it saving data, running the application logic or ensuring the delivery of the messages throughout the system.
+
+This approach gives us a lot of flexibility and makes management easier, like when upgrading a database server.
+
+We can also have dedicated teams and code repositories for every component, which keeps things cleaner.
+
+The single responsibility principle is then reason why I was never a fan of stored procedures.
+
+Stored procedures enable us to add business logic to the database, which is a big no for me. What if, in the future, we want to plug in a different database? Where do we take the business logic? Do we take it to the new database? Or do we try to refactor the application code and squeeze in the stored procedure logic somewhere?
+
+A database should not hold business logic. It should only take care of persisting the data. This is what the single responsibility principle is, and this is why we have separate tiers for separate components.
+-
+
+Separation of concerns kind of means the same thing, be concerned about your work only and stop worrying about the rest of the stuff.
+
+These principles act at all the levels of the service, both at the tier level and the code level.
+
+Keeping the components separate makes them reusable. Different services can use the same database, messaging server or any component as long as they are not tightly coupled with each other.
+
+Having loosely coupled components is the way to go. The approach makes scaling the service easy in the future when things grow beyond a certain level.
+-
+
+Difference between layers & tiers#
+Note: Don’t confuse tiers with the layers of the application. Some prefer to use them interchangeably. However, in the industry, layers of an application typically means the user interface layer, business layer, service layer, or the data access layer.
+
+The difference between layers and tiers is that layers represent the conceptual organization of the code and its components, whereas, tiers represent the physical separation of components.
+
+All these layers together can be used in any tiered application. Be it single, two, three or n-tier. I’ll discuss these layers in detail in the course ahead.
+-
+
 
 # Getting Started with Create React App
 
