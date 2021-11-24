@@ -37,13 +37,40 @@ Keeping the components separate makes them reusable. Different services can use 
 Having loosely coupled components is the way to go. The approach makes scaling the service easy in the future when things grow beyond a certain level.
 -
 
-Difference between layers & tiers#
+Difference between layers & tiers
 Note: Don’t confuse tiers with the layers of the application. Some prefer to use them interchangeably. However, in the industry, layers of an application typically means the user interface layer, business layer, service layer, or the data access layer.
 
 The difference between layers and tiers is that layers represent the conceptual organization of the code and its components, whereas, tiers represent the physical separation of components.
 
 All these layers together can be used in any tiered application. Be it single, two, three or n-tier. I’ll discuss these layers in detail in the course ahead.
 -
+
+
+A tier is the logical separation of components in an application or a service. The components are the database, backend application server, user interface, messaging, and caching.
+
+When should we choose a single tier architecture for our application?
+- When we do not want any network latency.
+
+Which of the following are the correct reasons to choose a two-tier architecture for our application?
+- When we need to minimize the network latency.
+    - When the business logic resides on the client there are fewer network calls to the backend server which keeps the latency of the application low.
+- When we need control over data in our application.
+    - All the data in the application is stored in the database server hosted by the business. The business has complete control over the database component.
+
+Which of the following are correct reasons to choose a three-tier architecture for our application?
+- When we need control over the code/business logic of our application and want it to be secure.
+  - In a three-tier architecture, the business logic resides in the backend server. No client has access to the backend code, and this makes the code secure. Also, the business has complete control over it.
+- When we need control over data in our application.
+  - All the data in the application is stored in the database server hosted by the business. The business has complete control over the database component.
+
+Why do software applications have different tiers? Which of the following option(s) are correct?
+- To assign dedicated roles/tasks to different components for a loosely coupled architecture.
+- To make the management, maintenance of the system and the introduction of new features in the application easier.
+
+Do layers and tiers in an application have the same meaning?
+- No!! Tiers and layers in software architecture have different meanings and cannot be used interchangeably.
+ - Tiers are the logical separation of components in an application or a service. The components are the database, backend application server, user interface, messaging, and caching.
+ - Layers in an application mean the logical separation at the code level. The layers are the user interface layer, business layer, service layer, and data access layer.
 
 
 # Getting Started with Create React App
