@@ -1,12 +1,15 @@
 Remaining Steps
+
+- introduce Redux (to store all the previous selections -> have that used for the final table generate button (todo: create a button) instead of the current way via props)
+- 404 page
+
+- testing with more realistic data (stub the calls)
+- css modules
+
 - build your own backend in NodeJS & Express
 - backend tests with mocked calls
 - call the backend from your frontend
-- testing with more realistic data (stub the calls)
-- introduce Redux (to store all the previous selections -> have that used for the final table generate button (todo: create a button) instead of the current way via props)
-- 404 page
 - hook up cosmodb database
-- css modules
 - host via Azure
 
 When you add the -D flag, or --save-dev, you are installing it as a development dependency, which adds it to the devDependencies list.
@@ -72,7 +75,7 @@ Do layers and tiers in an application have the same meaning?
  - Tiers are the logical separation of components in an application or a service. The components are the database, backend application server, user interface, messaging, and caching.
  - Layers in an application mean the logical separation at the code level. The layers are the user interface layer, business layer, service layer, and data access layer.
 
-# note that if you don't want to use create-react-app then you need to know how to build a website from scratch using webpack or parcel 
+# note that if you don't want to use create-react-app then you need to know how to build a website from scratch using webpack or parcel
 
 # Getting Started with Create React App
 
