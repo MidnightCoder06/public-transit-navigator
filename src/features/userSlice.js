@@ -15,34 +15,35 @@ export const userSlice = createSlice({
   name: 'siteVisitor',
   initialState: {
     value: {
-      selectedTransportationModeX: "",
+      selectedTransportationMode: "",
       selectedDirection: "",
       selectedStop: ""
     }
   },
   reducers: {
     // `state` keeps track of the current state
-    setSelectedTransportationModeX: (state, action) => {
+    setSelectedTransportationMode: (state, action) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
-      console.log(state, action)
-      //state.selectedTransportationMode = action.payload
+
+      //console.log(state, action)
+      state.value.selectedTransportationMode = action.payload
     },
-    setDirectionSelectedX: (state, action) => {
-      console.log(state, action)
-      //state.value.selectedDirection = action.payload
+    setDirectionSelected: (state, action) => {
+      //console.log(state, action)
+      state.value.selectedDirection = action.payload
     },
     // action is an object -> {payload & type} as values
-    setSelectedStopX: (state, action) => {
-      console.log(state, action)
-      //state.value.selectedStop = action.payload
+    setSelectedStop: (state, action) => {
+      //console.log(state, action)
+      state.value.selectedStop = action.payload
     },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { setSelectedTransportationModeX, setDirectionSelectedX, setSelectedStopX } = userSlice.actions
+export const { setSelectedTransportationMode, setDirectionSelected, setSelectedStop } = userSlice.actions
 
 export default userSlice.reducer

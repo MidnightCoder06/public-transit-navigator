@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/DropdownMenu.css';
 
 import { useDispatch } from 'react-redux';
-import { setDirectionSelectedX } from '../features/userSlice';
+import { setDirectionSelected } from '../features/userSlice';
 /*
 Now we can use the React Redux hooks to let React components interact with the Redux store.
 We can read data from the store with useSelector, and dispatch actions using useDispatch.
@@ -14,8 +14,8 @@ Read data from the store with the useSelector hook
 Get the dispatch function with the useDispatch hook, and dispatch actions as needed
 */
 const DirectionSelection = (props) => {
-  const { setDirectionSelected, setIsDirectionSelected } = props;
-  const [directions, setDirections] = useState(['Select direction', 'Northbound', 'Southbound']);
+  const { setIsDirectionSelected } = props;
+  const directions = ['Select direction', 'Northbound', 'Southbound'];
 
   const dispatch = useDispatch()
   /*
@@ -25,8 +25,7 @@ const DirectionSelection = (props) => {
   */
   const handleDirectionSelection = (selection) => {
     setIsDirectionSelected(true);
-    setDirectionSelected(selection);
-    dispatch(setDirectionSelectedX(selection));
+    dispatch(setDirectionSelected(selection));
   }
 
   return (

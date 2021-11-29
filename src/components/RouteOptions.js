@@ -4,19 +4,11 @@ import '../styles/Table.css'
 import { useSelector, useDispatch } from 'react-redux';
 
 const RouteOptions = (props) => {
-  const { selectedTransportationMode, selectedDirection, selectedStop } = props;
   const [tableData, setTableData] = useState(['table data 1', 'table data 2', 'table data 2']);
   const valuesFromRedux = useSelector((state) => state.siteVisitor.value)
 
-  // note that this api call would need access to the selections from the dropdown menu
-  console.log("****")
-  console.log(selectedTransportationMode)
-  console.log(selectedDirection)
-  console.log(selectedStop)
+  // TODO: make an api call here that would need access to all the selections from the dropdown menu
   console.log("****", valuesFromRedux)
-
-
-
 
   useEffect(() => {
     const fetchRouteOptions = async () => {

@@ -1,6 +1,6 @@
-import React, { useState }  from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { setSelectedTransportationModeX } from '../features/userSlice';
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { setSelectedTransportationMode } from '../features/userSlice';
 import '../styles/DropdownMenu.css';
 /*
 Now we can use the React Redux hooks to let React components interact with the Redux store.
@@ -13,9 +13,8 @@ Read data from the store with the useSelector hook
 Get the dispatch function with the useDispatch hook, and dispatch actions as needed
 */
 const TransportationModeSelection = (props) => {
-  const { setSelectedTransportationMode, setIsTransportationModeSelected } = props;
-  // TODO: we're not setting these here so it should just be a regular list
-  const [transportationOptions, setTransportationOptions] = useState(['Select method of transportation', 'Bus', 'Caltrain', 'BART', 'Muni']);
+  const { setIsTransportationModeSelected } = props;
+  const transportationOptions = ['Select method of transportation', 'Bus', 'Caltrain', 'BART', 'Muni'];
   const dispatch = useDispatch()
   /*
   The corresponding Redux action will be dispatched to the store
@@ -24,8 +23,7 @@ const TransportationModeSelection = (props) => {
   */
   const handleTransportationModeSelection = (selection) => {
     setIsTransportationModeSelected(true);
-    setSelectedTransportationMode(selection);
-    dispatch(setSelectedTransportationModeX(selection));
+    dispatch(setSelectedTransportationMode(selection));
   }
 
   return (

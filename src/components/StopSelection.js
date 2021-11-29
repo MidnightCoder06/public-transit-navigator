@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { setSelectedStopX } from '../features/userSlice';
+import { setSelectedStop } from '../features/userSlice';
 import '../styles/DropdownMenu.css';
 /*
 Now we can use the React Redux hooks to let React components interact with the Redux store.
@@ -16,7 +16,7 @@ Get the dispatch function with the useDispatch hook, and dispatch actions as nee
 // stop means your destination
   // Have the list of options be dependent on the mode of transportation
 const StopSelection = (props) => {
-  const { setSelectedStop, setIsStopSelected } = props;
+  const { setIsStopSelected } = props;
   const [stops, setStops] = useState(['Select stop', 'mock stop 1', 'mock stop 2']);
 
   const dispatch = useDispatch()
@@ -53,8 +53,7 @@ const StopSelection = (props) => {
   */
   const handleStopSelection = (selection) => {
     setIsStopSelected(true);
-    setSelectedStop(selection);
-    dispatch(setSelectedStopX(selection));
+    dispatch(setSelectedStop(selection));
   }
 
   return (
