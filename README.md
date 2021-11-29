@@ -1,16 +1,40 @@
 Remaining Steps
 
 - introduce Redux (to store all the previous selections -> have that used for the final table generate button (todo: create a button) instead of the current way via props)
-- 404 page
 
-- testing with more realistic data (stub the calls)
-- css modules
+
+
+- testing with more realistic data (stub the calls): https://www.youtube.com/watch?v=Y0lDGjwRYKw&list=PL4cUxeGkcC9iK6Qhn-QLcXCXPQUov1U7f
+- flexbox -> look up tutorials & read docs
+- css modules -> look tutorials & read docs
 
 - build your own backend in NodeJS & Express
 - backend tests with mocked calls
 - call the backend from your frontend
 - hook up cosmodb database
-- host via Azure
+- host via Azure (add the 404 image from a blob right before this)
+
+
+
+Lecutures to review
+
+AJAX
+Art Collector
+Strangers Things
+  https://strangers-things.herokuapp.com/api/
+Wizard News
+JuiceBox
+
+Tumblr Clone
+  fsa sql lectures
+    https://www.youtube.com/watch?v=HhzhNKoIMDQ
+    https://www.youtube.com/watch?v=30lRKy-qlOc
+  use typescript from the begining
+    https://www.youtube.com/watch?v=2pZmKW9-I_k&list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI
+  build from scratch using webpack
+    https://www.youtube.com/watch?v=sOUhEJeJ-kI&list=PL4cUxeGkcC9hOkGbwzgYFmaxB0WiduYJC
+  backend in nextjs
+    https://www.youtube.com/watch?v=A63UxsQsEbU&list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw
 
 When you add the -D flag, or --save-dev, you are installing it as a development dependency, which adds it to the devDependencies list.
 

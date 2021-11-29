@@ -5,13 +5,19 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 
+// redux stuff
+import store from './redux/store'
+import { Provider } from 'react-redux'
+
 /* https://reactjs.org/docs/strict-mode.html */
 /* the root id references an element in index.html in the public folder: <div id="root"></div> */
 ReactDOM.render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
