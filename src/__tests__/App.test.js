@@ -20,7 +20,7 @@ describe('top level app component test', () => {
 
   beforeEach(() => {
     store = mockStore({
-      myState: 'hello',
+      siteVisitor: 'foo bar',
     });
   });
 

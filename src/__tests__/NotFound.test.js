@@ -12,7 +12,7 @@ describe('check 404 page properties', () => {
 
   beforeEach(() => {
     store = mockStore({
-      myState: 'hello',
+      siteVisitor: 'foo bar',
     });
   });
 

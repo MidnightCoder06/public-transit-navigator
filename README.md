@@ -1,9 +1,18 @@
-Remaining Steps
+Remaining Steps:
 
-- testing with more realistic data (stub the calls): https://www.youtube.com/watch?v=Y0lDGjwRYKw&list=PL4cUxeGkcC9iK6Qhn-QLcXCXPQUov1U7f
 - flexbox -> look up tutorials & read docs
 - css modules -> look tutorials & read docs
+- improve testing (test actual actions)
+https://www.youtube.com/watch?v=Y0lDGjwRYKw&list=PL4cUxeGkcC9iK6Qhn-QLcXCXPQUov1U7f
+https://www.robinwieruch.de/react-connected-component-test/
+https://www.npmjs.com/package/redux-mock-store
+https://www.youtube.com/watch?v=0WhGneB2s3Y&list=PLq5m66kIJ5Z8JgWEee1hszc10B8qxeMGE
+https://www.youtube.com/watch?v=8Qfz5EFG9gQ
+https://www.youtube.com/watch?v=XK3vBDuq3uM
+https://djangostars.com/blog/unit-integration-testing-redux-react-forms/
+https://redux.js.org/usage/writing-tests
 
+* after job offer:
 - build your own backend in NodeJS & Express
 - backend tests with mocked calls
 - call the backend from your frontend
@@ -11,8 +20,7 @@ Remaining Steps
 - host via Azure (add the 404 image from a blob right before this)
 
 
-
-Lecutures to review
+Lectures to review:
 
 AJAX
 Art Collector
@@ -31,6 +39,7 @@ Tumblr Clone
     https://www.youtube.com/watch?v=sOUhEJeJ-kI&list=PL4cUxeGkcC9hOkGbwzgYFmaxB0WiduYJC
   backend in nextjs
     https://www.youtube.com/watch?v=A63UxsQsEbU&list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw
+  build from scratch using parcel
 
 When you add the -D flag, or --save-dev, you are installing it as a development dependency, which adds it to the devDependencies list.
 
