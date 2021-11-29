@@ -55,6 +55,23 @@ The Redux Toolkit package is intended to be the standard way to write Redux logi
 - "I have to add a lot of packages to get Redux to do anything useful"
 - "Redux requires too much boilerplate code"
 
+Before the toolkit it was more complicated to deal with:
+connecting our React component to the Redux store by receiving state (e.g. via mapStateToProps) and dispatches an action (e.g. via mapDispatchToProps).
+
+==
+
+describe('My Connected React-Redux Component', () => {
+  it('should render with given state from Redux store', () => {
+
+  });
+
+  it('should dispatch an action on button click', () => {
+
+  });
+});
+
+==
+
 Helpful starter commands:
 
 # Redux + Plain JS template
