@@ -1,9 +1,5 @@
 Remaining Steps
 
-- introduce Redux (to store all the previous selections -> have that used for the final table generate button (todo: create a button) instead of the current way via props)
-
-
-
 - testing with more realistic data (stub the calls): https://www.youtube.com/watch?v=Y0lDGjwRYKw&list=PL4cUxeGkcC9iK6Qhn-QLcXCXPQUov1U7f
 - flexbox -> look up tutorials & read docs
 - css modules -> look tutorials & read docs
