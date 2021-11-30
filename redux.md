@@ -58,6 +58,16 @@ The Redux Toolkit package is intended to be the standard way to write Redux logi
 Before the toolkit it was more complicated to deal with:
 connecting our React component to the Redux store by receiving state (e.g. via mapStateToProps) and dispatches an action (e.g. via mapDispatchToProps).
 
+React's new "hooks" APIs give function components the ability to use local component state, execute side effects, and more. React also lets us write custom hooks, which let us extract reusable hooks to add our own behavior on top of React's built-in hooks.
+
+React Redux includes its own custom hook APIs, which allow your React components to subscribe to the Redux store and dispatch actions.
+
+We recommend using the React-Redux hooks API as the default approach in your React components.
+
+The existing connect API still works and will continue to be supported, but the hooks API is simpler and works better with TypeScript.
+
+These hooks were first added in v7.1.0.
+
 ==
 
 describe('My Connected React-Redux Component', () => {

@@ -20,6 +20,78 @@ const StopSelection = (props) => {
   const [stops, setStops] = useState(['Select stop', 'mock stop 1', 'mock stop 2']);
 
   const dispatch = useDispatch()
+  /*
+
+  useDispatch() returns a reference to the dispatch function from the Redux store.
+  You may use it to dispatch actions as needed.
+
+  example:
+
+  import React from 'react'
+  import { useDispatch } from 'react-redux'
+
+  export const CounterComponent = ({ value }) => {
+    const dispatch = useDispatch()
+
+    return (
+      <div>
+        <span>{value}</span>
+        <button onClick={() => dispatch({ type: 'increment-counter' })}>
+          Increment counter
+        </button>
+      </div>
+    )
+  }
+
+  #####
+
+
+  When passing a callback using dispatch to a child component, you may sometimes want to memoize it with useCallback.
+  If the child component is trying to optimize render behavior using React.memo() or similar,
+  this avoids unnecessary rendering of child components due to the changed callback reference.
+
+  import React, { useCallback } from 'react'
+  import { useDispatch } from 'react-redux'
+
+  export const CounterComponent = ({ value }) => {
+    const dispatch = useDispatch()
+    const incrementCounter = useCallback(
+      () => dispatch({ type: 'increment-counter' }),
+      [dispatch]
+    )
+
+    return (
+      <div>
+        <span>{value}</span>
+        <MyIncrementButton onIncrement={incrementCounter} />
+      </div>
+    )
+  }
+
+  export const MyIncrementButton = React.memo(({ onIncrement }) => (
+    <button onClick={onIncrement}>Increment counter</button>
+  ))
+
+  #####
+
+
+  The dispatch function reference will be stable as long as the same store instance is being passed to the <Provider>.
+  Normally, that store instance never changes in an application.
+
+  However, the React hooks lint rules do not know that dispatch should be stable,
+  and will warn that the dispatch variable should be added to dependency arrays for useEffect and useCallback.
+  The simplest solution is to do just that:
+
+  export const Todos = () => {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+      dispatch(fetchTodos())
+      // Safe to add dispatch to the dependencies array
+    }, [dispatch])
+  }
+
+  */
 
   useEffect(() => {
     const fetchStops = async () => {

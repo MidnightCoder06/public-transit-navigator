@@ -12,7 +12,6 @@ https://www.youtube.com/watch?v=XK3vBDuq3uM
 https://djangostars.com/blog/unit-integration-testing-redux-react-forms/
 https://redux.js.org/usage/writing-tests
 
-* after job offer:
 - build your own backend in NodeJS & Express
 - backend tests with mocked calls
 - call the backend from your frontend
